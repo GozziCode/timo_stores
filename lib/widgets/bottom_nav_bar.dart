@@ -30,8 +30,8 @@ class _BottomNavBarState extends State<BottomNavBar> {
     final size = MediaQuery.of(context).size;
     return Container(
       padding: const EdgeInsets.symmetric(horizontal: 15, vertical: 5),
-      margin: const EdgeInsets.fromLTRB(32, 0, 32, 24),
-      height: size.height * 0.4 / 5,
+      margin: const EdgeInsets.fromLTRB(50, 0, 50, 24),
+      height: size.height * 0.36 / 5,
       decoration: BoxDecoration(
           color: Colors.black,
           boxShadow: [
@@ -121,8 +121,8 @@ class _NavBarItemState extends State<NavBarItem>
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      width: widget.size.width * .15,
-      height: widget.size.height * .1,
+      width: widget.size.width * .13,
+      height: widget.size.height * .08,
       child: Stack(
         children: [
           Align(
@@ -140,7 +140,7 @@ class _NavBarItemState extends State<NavBarItem>
             alignment: Alignment.center,
             child: Icon(
               widget.data.icon,
-              size: widget.size.height * .03,
+              size: widget.size.height * .037,
               color: widget.isSelected ? Colors.deepOrange : Colors.white,
             ),
           ),

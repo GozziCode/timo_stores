@@ -13,8 +13,7 @@ AppBar homeAppBar(BuildContext context) {
         ),
       ),
     ),
-    // toolbarHeight: 80,
-    leadingWidth: double.infinity,
+     leadingWidth: double.infinity,
     elevation: 0,
     backgroundColor: const Color(0xFFF5F5F5),
     actions: [

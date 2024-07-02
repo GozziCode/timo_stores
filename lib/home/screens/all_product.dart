@@ -11,9 +11,9 @@ class AllProduct extends StatelessWidget {
     return GridView.builder(
       gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
         crossAxisCount: 2,
-        crossAxisSpacing: 5,
-        mainAxisSpacing: 0.3,
-        childAspectRatio: 0.55,
+        crossAxisSpacing: 1,
+        mainAxisSpacing: 0.2,
+        childAspectRatio: 0.56,
       ),
       itemCount: dummyProducts.length,
       itemBuilder: (BuildContext context, int index) {
@@ -50,7 +50,7 @@ class ProductContainer extends StatelessWidget {
                     product: product,
                   ))),
           child: Container(
-            height: size.height * .26,
+            height: size.height * .30,
             width: double.infinity,
             decoration: BoxDecoration(
                 image: DecorationImage(
@@ -93,7 +93,7 @@ class ProductContainer extends StatelessWidget {
         Text(
           product.name,
           style: TextStyle(
-              fontWeight: FontWeight.w500, fontSize: size.height * 0.014),
+              fontWeight: FontWeight.w500, fontSize: size.height * 0.016),
         ),
         Text(
           "\$${product.price}",

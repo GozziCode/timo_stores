@@ -63,7 +63,7 @@ class Cart {
 
   static void clear(BuildContext context) {
     _items.clear();
-    Navigator.of(context)
-        .push(MaterialPageRoute(builder: (context) => OrderSuccessScreen()));
+    Navigator.of(context).push(
+        MaterialPageRoute(builder: (context) => const OrderSuccessScreen()));
   }
 }

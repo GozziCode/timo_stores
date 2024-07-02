@@ -64,6 +64,7 @@ class _DetailScreenState extends State<DetailScreen> {
 
   @override
   Widget build(BuildContext context) {
+    final size = MediaQuery.of(context).size;
     return Scaffold(
       body: Column(
         children: [
@@ -73,7 +74,7 @@ class _DetailScreenState extends State<DetailScreen> {
               Image.asset(
                 widget.product.img,
                 fit: BoxFit.cover,
-                height: 450,
+                height: size.height * .44,
                 width: double.infinity,
               ),
               Positioned(
@@ -115,7 +116,7 @@ class _DetailScreenState extends State<DetailScreen> {
               )
             ],
           ),
-          const SizedBox(height: 15),
+          const SizedBox(height: 10),
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: 25),
             child: Column(
@@ -126,29 +127,29 @@ class _DetailScreenState extends State<DetailScreen> {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     SizedBox(
-                      width: 300,
+                      width: size.width * .70,
                       child: Text(
                         widget.product.name,
                         softWrap: true,
-                        style: const TextStyle(
-                          fontSize: 32,
+                        style: TextStyle(
+                          fontSize: size.height * .032,
                           fontWeight: FontWeight.w600,
                         ),
                       ),
                     ),
                     Text(
                       '\$${widget.product.price}',
-                      style: const TextStyle(
-                          fontSize: 30,
+                      style: TextStyle(
+                          fontSize: size.height * .028,
                           fontWeight: FontWeight.bold,
                           color: Colors.deepOrange),
                     )
                   ],
                 ),
-                const SizedBox(height: 15),
+                const SizedBox(height: 5),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  crossAxisAlignment: CrossAxisAlignment.start,
+                  // crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     SizedBox(
                       child: Row(
@@ -162,8 +163,9 @@ class _DetailScreenState extends State<DetailScreen> {
                           ),
                           Text(
                             widget.product.rating,
-                            style: const TextStyle(
-                                fontSize: 24, fontWeight: FontWeight.w500),
+                            style: TextStyle(
+                                fontSize: size.height * .025,
+                                fontWeight: FontWeight.w500),
                           )
                         ],
                       ),
@@ -171,19 +173,22 @@ class _DetailScreenState extends State<DetailScreen> {
                     CustomAddRemoveButton(
                       quantity: '$_quantity',
                       addItem: _addItem,
-                      removeItem: _removeItem,
+                      removeItem: _removeItem, 
                     ),
                   ],
                 ),
                 const SizedBox(
-                  height: 10,
+                  height: 5,
                 ),
                 const Text(
                   'Select Color:',
                   style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
                 ),
+                const SizedBox(
+                  height: 5,
+                ),
                 SizedBox(
-                  height: 40,
+                  height: size.height * .04,
                   child: ListView.builder(
                     scrollDirection: Axis.horizontal,
                     itemCount: widget.product.listedColors.length,
@@ -197,8 +202,8 @@ class _DetailScreenState extends State<DetailScreen> {
                         },
                         child: Container(
                           margin: const EdgeInsets.symmetric(horizontal: 5),
-                          height: 40,
-                          width: 40,
+                          // height: size.height*.015,
+                          width: size.width * .08,
                           decoration: BoxDecoration(
                             color: color,
                             borderRadius: BorderRadius.circular(10),
@@ -214,12 +219,12 @@ class _DetailScreenState extends State<DetailScreen> {
                     },
                   ),
                 ),
-                const SizedBox(height: 15),
+                const SizedBox(height: 10),
                 Text(
                   widget.product.description, softWrap: true, maxLines: 4,
                   // textAlign: TextAlign.justify,
-                  style: const TextStyle(
-                    fontSize: 18,
+                  style: TextStyle(
+                    fontSize: size.height * .018,
                   ),
                 ),
               ],
@@ -229,34 +234,33 @@ class _DetailScreenState extends State<DetailScreen> {
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: 24),
             child: SizedBox(
-              height: 70,
+              height: size.height * .07,
               child: ListView.builder(
                 scrollDirection: Axis.horizontal,
                 itemCount: widget.product.sizes.length,
                 itemBuilder: (context, index) {
-                  final size = widget.product.sizes[index];
+                  final sizeSelected = widget.product.sizes[index];
                   return GestureDetector(
                     onTap: () {
                       setState(() {
-                        _selectedSize = size;
+                        _selectedSize = sizeSelected;
                       });
                     },
                     child: Container(
                       margin: const EdgeInsets.symmetric(horizontal: 8),
-                      height: 70,
-                      width: 70,
+                      width: size.width * 0.14,
                       decoration: BoxDecoration(
-                          color: _selectedSize == size
+                          color: _selectedSize == sizeSelected
                               ? Colors.black
                               : Colors.transparent,
                           border: Border.all(color: Colors.grey),
-                          borderRadius: BorderRadius.circular(50)),
+                          shape: BoxShape.circle),
                       child: Center(
                         child: Text(
-                          size,
+                          sizeSelected,
                           style: TextStyle(
-                              fontSize: 24,
-                              color: _selectedSize == size
+                              fontSize: 20,
+                              color: _selectedSize == sizeSelected
                                   ? Colors.white
                                   : Colors.black),
                         ),
@@ -270,13 +274,13 @@ class _DetailScreenState extends State<DetailScreen> {
           const Spacer(),
           Container(
               margin: const EdgeInsets.symmetric(horizontal: 24, vertical: 10),
-              height: 75,
+              height: size.height * .07,
               width: double.infinity,
               child: ElevatedButton(
                 onPressed: _addItem,
                 style: ElevatedButton.styleFrom(
                   shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(25)),
+                      borderRadius: BorderRadius.circular(15)),
                   backgroundColor: Colors.deepOrange,
                 ),
                 child: const Text(

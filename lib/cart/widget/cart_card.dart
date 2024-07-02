@@ -5,9 +5,11 @@ import '../model/cart_model.dart';
 
 class CartCard extends StatefulWidget {
   final CartItem cartItem;
+  final VoidCallback remove;
   const CartCard({
     super.key,
     required this.cartItem,
+    required this.remove,
   });
 
   @override
@@ -17,9 +19,9 @@ class CartCard extends StatefulWidget {
 class _CartCardState extends State<CartCard> {
   @override
   Widget build(BuildContext context) {
+    final size = MediaQuery.of(context).size;
     return Container(
-      height: 170,
-      width: double.infinity,
+      height: size.height * .22,
       padding: const EdgeInsets.all(15),
       margin: const EdgeInsets.symmetric(horizontal: 25, vertical: 5),
       decoration: BoxDecoration(
@@ -30,20 +32,30 @@ class _CartCardState extends State<CartCard> {
               borderRadius: BorderRadius.circular(15),
               child: Image.asset(
                 widget.cartItem.product.img,
-                height: 150,
-                width: 100,
+                width: size.width * .22,
               )),
-          const SizedBox(width: 15),
+          const SizedBox(width: 10),
           Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Text(
-                widget.cartItem.product.name,
-                softWrap: true,
-                style:
-                    const TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  SizedBox(
+                    width: size.width * .422,
+                    child: Text(
+                      widget.cartItem.product.name,
+                      softWrap: true,
+                      style: TextStyle(
+                          fontWeight: FontWeight.bold,
+                          fontSize: size.height * 0.022),
+                    ),
+                  ),
+                  IconButton(
+                      onPressed: widget.remove, icon: const Icon(Icons.delete, color: Colors.red,))
+                ],
               ),
-              const SizedBox(height: 10),
+              const SizedBox(height: 5),
               RichText(
                   text: TextSpan(children: [
                 const TextSpan(
@@ -52,7 +64,7 @@ class _CartCardState extends State<CartCard> {
                     text: '${widget.cartItem.selectedSize}',
                     style: const TextStyle(color: Colors.black))
               ])),
-              const SizedBox(height: 10),
+              const SizedBox(height: 5),
               Row(
                 children: [
                   const Text('Color: ', style: TextStyle(color: Colors.grey)),
@@ -102,13 +114,13 @@ class _CartCardState extends State<CartCard> {
                       );
                     },
                   ),
-                  const SizedBox(
-                    width: 90,
+                  SizedBox(
+                    width: size.width * 0.12,
                   ),
                   Text(
                     '\$${widget.cartItem.product.price}',
-                    style: const TextStyle(
-                        fontSize: 22,
+                    style: TextStyle(
+                        fontSize: size.height * .025,
                         fontWeight: FontWeight.bold,
                         color: Colors.deepOrange),
                   )

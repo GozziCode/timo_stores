@@ -5,8 +5,8 @@ This is a solution to the mobile dev stage one task of Simple Shooping App organ
 ## Table of contents
 
 - [Overview](#overview)
-  - [The challenge](#the-challenge)
-  - [Screenshot](#screenshot)
+- [Task Requirement](#task-requirement)
+- [Screenshot](#screenshot)
 - [My process](#my-process)
   - [Built with](#built-with)
   - [What I learned](#what-i-learned)
@@ -17,16 +17,14 @@ This is a solution to the mobile dev stage one task of Simple Shooping App organ
 
 ## Overview
 
-### The challenge
+Create a simple shopping app that is showing a list of products/items (statically) in a shop and a checkout screen.
 
-Users should be able to:
+## Task Requirement
 
-- View the optimal layout for the site depending on their device's screen size
-- See hover states for all interactive elements on the page
-- Open a lightbox gallery by clicking on the large product image
-- Switch the large product image by clicking on the small thumbnail images
-- Add items to the cart
-- View the cart and remove items from it
+- A bottom navigation bar consisting of Products and Checkout items
+- Products will displays the list of products/items, Checkout will display the products added for checkout.
+- Have the functionality of adding and removing items to the Checkout .
+- A button that navigates to an Order Successful screen from the Checkout screen.
 
 ### Screenshot
 
@@ -99,13 +97,11 @@ Check out these few resources to get you started if this is your first flutter p
 
 ## Author
 
-<!-- - Website - [Add your name here](https://www.your-site.com) -->
-<!-- - Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/yourusername) -->
 - Uma Godwin Eke
 - Linkedin - [@godwinekeuma](https://www.linkedin.com/in/godwinekeuma)
 - Email - [godwinekeuma@gmail.com](https://www.frontendmentor.io/profile/yourusername)
 - Twitter - [@godwinekeuma](https://www.twitter.com/godwinekeuma)
 
-## Acknowledgments
+<!-- ## Acknowledgments
 
-I really want to appreciate Temitope David for encouraging me to join the challange, have really learnt alot am sure his design using html, css and javascript will be wow :-).
+I really want to appreciate Temitope David for encouraging me to join the challange, have really learnt alot am sure his design using html, css and javascript will be wow :-). -->

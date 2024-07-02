@@ -27,7 +27,7 @@ List<ProductModel> dummyProducts = [
       listedColors: [Colors.green, Colors.red, Colors.black],
       sizes: ['S', 'M', 'L', 'XL', 'XXL'],
       img: 'assets/images/product1.jpg',
-      name: '"Risk Owen Jacket"',
+      name: 'Risk Owen Jacket',
       price: '800',
       description:
           'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Elementum nisi quis eleifend quam adipiscing vitae proin. Pellentesque eu tincidunt tortor aliquam nulla facilisi cras fermentum. Quis blandit turpis cursus in hac.',
@@ -37,7 +37,7 @@ List<ProductModel> dummyProducts = [
       listedColors: [Colors.green, Colors.white, Colors.black],
       sizes: ['S', 'M', 'XL', 'XXL'],
       img: 'assets/images/product2.jpg',
-      name: 'AlRism Cotton Short Sleeve Set',
+      name: 'AlRism Cotton Black Jacket',
       price: '389',
       description:
           'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Iaculis eu non diam phasellus. Sit amet est placerat in egestas erat imperdiet. Rhoncus est pellentesque elit ullamcorper dignissim cras. Neque egestas congue quisque egestas diam in arcu. Integer vitae justo eget magna fermentum.',
@@ -47,7 +47,7 @@ List<ProductModel> dummyProducts = [
       listedColors: [Colors.blue, Colors.red, Colors.black],
       sizes: ['S', 'M', 'L', 'XL', 'XXL'],
       img: 'assets/images/product3.jpg',
-      name: 'Product 3',
+      name: 'Ninja Hoody',
       price: '800',
       description:
           'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ornare arcu dui vivamus arcu felis bibendum. Accumsan sit amet nulla facilisi morbi. Adipiscing at in tellus integer. Ac tortor vitae purus faucibus ornare suspendisse sed. Sapien faucibus et molestie ac feugiat sed lectus.',
@@ -66,7 +66,7 @@ List<ProductModel> dummyProducts = [
         'XL',
       ],
       img: 'assets/images/product4.jpg',
-      name: 'Product 4',
+      name: 'Police Jacket',
       price: '900',
       description:
           'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Amet consectetur adipiscing elit ut aliquam purus sit amet luctus. Odio aenean sed adipiscing diam. Duis ultricies lacus sed turpis tincidunt id aliquet risus feugiat. Magna sit amet purus gravida quis blandit.',
@@ -76,7 +76,7 @@ List<ProductModel> dummyProducts = [
       listedColors: [Colors.green, Colors.grey, Colors.black],
       sizes: ['S', 'M', 'L', 'XL', 'XXL'],
       img: 'assets/images/product5.jpg',
-      name: 'Product 5',
+      name: 'Crazy Jeans',
       price: '800',
       description:
           'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Eu consequat ac felis donec. Orci nulla pellentesque dignissim enim sit amet venenatis urna cursus. Adipiscing commodo elit at imperdiet dui accumsan sit amet nulla. Dolor magna eget est lorem ipsum dolor sit.',
@@ -86,7 +86,7 @@ List<ProductModel> dummyProducts = [
       listedColors: [Colors.green, Colors.pink, Colors.purple],
       sizes: ['M', 'L', 'XL', 'XXL'],
       img: 'assets/images/product6.jpg',
-      name: 'Product 6',
+      name: 'Boom Sneakers',
       price: '1000',
       description:
           'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Vestibulum mattis ullamcorper velit sed ullamcorper morbi tincidunt. Vitae tortor condimentum lacinia quis vel eros. Laoreet non curabitur gravida arcu.',
@@ -106,7 +106,7 @@ List<ProductModel> dummyProducts = [
         'XXL'
       ],
       img: 'assets/images/product7.jpg',
-      name: 'Product 7',
+      name: 'Movasino Shoe',
       price: '2300',
       description:
           'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Semper quis lectus nulla at volutpat diam. Varius quam quisque id diam vel quam elementum. Sit amet nisl suscipit adipiscing bibendum est.',
@@ -124,7 +124,7 @@ List<ProductModel> dummyProducts = [
         'XXL'
       ],
       img: 'assets/images/product8.jpg',
-      name: 'Product 8',
+      name: 'Flat Corporate Shoe',
       price: '1200',
       description:
           'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Augue mauris augue neque gravida. Amet mauris commodo quis imperdiet massa tincidunt nunc pulvinar sapien. Pulvinar mattis nunc sed blandit libero volutpat sed cras ornare.',
@@ -134,7 +134,7 @@ List<ProductModel> dummyProducts = [
       listedColors: [Colors.green, Colors.red, Colors.black],
       sizes: ['S', 'M', 'L', 'XXL'],
       img: 'assets/images/product9.jpg',
-      name: 'Product 9',
+      name: 'Corporate Wear Set',
       price: '1800',
       description:
           'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Pellentesque habitant morbi tristique senectus et netus et. Interdum varius sit amet mattis vulputate enim nulla. Tempus urna et pharetra pharetra massa massa ultricies.',
@@ -154,7 +154,7 @@ List<ProductModel> dummyProducts = [
         'XL',
       ],
       img: 'assets/images/product2.jpg',
-      name: 'Product 1',
+      name: 'Clean Black Jacket',
       price: '520',
       description:
           'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Id aliquet lectus proin nibh. Ante metus dictum at tempor. Sed ullamcorper morbi tincidunt ornare massa.',
@@ -174,7 +174,7 @@ List<ProductModel> dummyProducts = [
         'XXL',
       ],
       img: 'assets/images/product10.jpg',
-      name: 'Product 10',
+      name: 'New Dress',
       price: '960',
       description:
           'Na here i go find watin to write oh bbut i no wan generate text lorumpsun abi watin them dey call that thing na pigin go sha dey here',

@@ -13,31 +13,39 @@ class CartScreen extends StatefulWidget {
 class _CartScreenState extends State<CartScreen> {
   @override
   Widget build(BuildContext context) {
+    final size = MediaQuery.of(context).size;
     return Column(
       children: [
         const SizedBox(
           height: 5,
         ),
         SizedBox(
-          height: 550,
+          height: size.height * .55,
           child: Cart.items.isEmpty
               ? const Center(
                   child: Text(
                     'No item added to cart yet',
-                    style: TextStyle(fontSize: 20),
+                    style: TextStyle(fontSize: 16),
                   ),
                 )
               : ListView.builder(
                   itemCount: Cart.items.length,
                   itemBuilder: (BuildContext context, int index) {
                     final cartItem = Cart.items[index];
-                    return CartCard(cartItem: cartItem);
+                    return CartCard(
+                      cartItem: cartItem,
+                      remove: () {
+                        setState(() {
+                          Cart.items.removeAt(index);
+                        });
+                      },
+                    );
                   }),
         ),
         Container(
           padding: const EdgeInsets.all(5),
           margin: const EdgeInsets.symmetric(horizontal: 25),
-          height: 200,
+          height: size.height * .22,
           child: Column(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: <Widget>[
@@ -46,13 +54,14 @@ class _CartScreenState extends State<CartScreen> {
                 children: [
                   Text(
                     'Subtotal',
-                    style: TextStyle(color: Colors.grey[600], fontSize: 18),
+                    style: TextStyle(
+                        color: Colors.grey[600], fontSize: size.height * .019),
                   ),
                   Text(
                     '\$${Cart.subtotal}',
-                    style: const TextStyle(
+                    style: TextStyle(
                         color: Colors.black,
-                        fontSize: 18,
+                        fontSize: size.height * .019,
                         fontWeight: FontWeight.bold),
                   )
                 ],
@@ -62,13 +71,14 @@ class _CartScreenState extends State<CartScreen> {
                 children: [
                   Text(
                     'Voucher',
-                    style: TextStyle(color: Colors.grey[600], fontSize: 18),
+                    style: TextStyle(
+                        color: Colors.grey[600], fontSize: size.height * .019),
                   ),
-                  const Text(
+                  Text(
                     '\$0.00',
                     style: TextStyle(
                         color: Colors.red,
-                        fontSize: 18,
+                        fontSize: size.height * .019,
                         fontWeight: FontWeight.bold),
                   )
                 ],
@@ -78,13 +88,14 @@ class _CartScreenState extends State<CartScreen> {
                 children: [
                   Text(
                     'Delivery',
-                    style: TextStyle(color: Colors.grey[600], fontSize: 18),
+                    style: TextStyle(
+                        color: Colors.grey[600], fontSize: size.height * .019),
                   ),
-                  const Text(
+                  Text(
                     '\$0.0',
                     style: TextStyle(
                         color: Colors.black,
-                        fontSize: 18,
+                        fontSize: size.height * .019,
                         fontWeight: FontWeight.bold),
                   )
                 ],
@@ -92,97 +103,41 @@ class _CartScreenState extends State<CartScreen> {
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  const Text(
+                  Text(
                     'Total Cost',
                     style: TextStyle(
                         color: Colors.black,
-                        fontSize: 22,
+                        fontSize: size.height * .020,
                         fontWeight: FontWeight.bold),
                   ),
                   Text(
                     '\$${Cart.subtotal}',
-                    style: const TextStyle(
+                    style: TextStyle(
                         color: Colors.green,
-                        fontSize: 22,
+                        fontSize: size.height * .020,
                         fontWeight: FontWeight.bold),
                   )
                 ],
               ),
-              const SizedBox(
-                height: 15,
-              ),
-              Row(
-                children: [
-                  Expanded(
-                    child: Container(
-                      padding: const EdgeInsets.all(5),
-                      decoration: BoxDecoration(
-                          border: Border.all(color: const Color(0xFFCFCBCB)),
-                          borderRadius: BorderRadius.circular(25)),
-                      child: Row(
-                        children: [
-                          Expanded(
-                            child: TextFormField(
-                              decoration: const InputDecoration(
-                                border: OutlineInputBorder(
-                                  borderSide: BorderSide(
-                                    width: 0,
-                                    style: BorderStyle.none,
-                                  ),
-                                ),
-                                hintText: 'Promotion code',
-                              ),
-                            ),
-                          ),
-                          SizedBox(
-                              height: 50,
-                              width: 100,
-                              child: ElevatedButton(
-                                onPressed: () {},
-                                style: ElevatedButton.styleFrom(
-                                  shape: RoundedRectangleBorder(
-                                      borderRadius: BorderRadius.circular(20)),
-                                  backgroundColor: Colors.deepOrangeAccent,
-                                ),
-                                child: const Text(
-                                  'Apply',
-                                  style: TextStyle(
-                                      color: Colors.white, fontSize: 18),
-                                ),
-                              ))
-                        ],
-                      ),
-                    ),
+              SizedBox(
+                height: size.height * .07,
+                width: double.infinity,
+                child: ElevatedButton(
+                  onPressed: () {
+                    setState(() {
+                      Cart.clear(context);
+                    });
+                  },
+                  style: ElevatedButton.styleFrom(
+                    shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(15)),
+                    backgroundColor: Colors.deepOrangeAccent,
                   ),
-                  const SizedBox(
-                    width: 10,
+                  child: const Text(
+                    'Comlete Checkout',
+                    style: TextStyle(color: Colors.white, fontSize: 18),
                   ),
-                  SizedBox(
-                    height: 60,
-                    width: 180,
-                    child: ElevatedButton(
-                      onPressed: () {
-                        setState(() {
-                          Cart.clear(context);
-                        });
-                      },
-                      style: ElevatedButton.styleFrom(
-                        shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(15)),
-                        backgroundColor: Colors.deepOrangeAccent,
-                      ),
-                      child: const Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: [
-                          Text(
-                            'Comlete Checkout',
-                            style: TextStyle(color: Colors.white, fontSize: 18),
-                          ),
-                        ],
-                      ),
-                    ),
-                  ),
-                ],
+                ),
               )
             ],
           ),
@@ -191,4 +146,3 @@ class _CartScreenState extends State<CartScreen> {
     );
   }
 }
-

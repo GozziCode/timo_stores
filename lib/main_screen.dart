@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:timo_stores/home/screens/homescreen.dart';
 import 'package:timo_stores/widgets/general_appbar.dart';
-import 'package:timo_stores/widgets/general_widget_holder.dart';
 
 import 'cart/screens/cart_screen.dart';
 import 'home/widgets/home_appbar.dart';
@@ -26,9 +25,7 @@ class _MainScreenState extends State<MainScreen>
 
     _screens = [
       const HomeScreen(),
-      const GeneralWidgetHolder(text: 'No favorite added yet, coming soon..'),
       const CartScreen(),
-      const GeneralWidgetHolder(text: 'No Profile logged in yet, coming soon..'),
     ];
   }
 
@@ -36,9 +33,7 @@ class _MainScreenState extends State<MainScreen>
   Widget build(BuildContext context) {
     final List<PreferredSizeWidget> appBars = [
       homeAppBar(context),
-      generalAppBar(context: context, title: 'favourite'),
       generalAppBar(context: context, title: 'Checkout'),
-      generalAppBar(context: context, title: 'Profile')
     ];
     return Scaffold(
       backgroundColor: Colors.grey[200],
@@ -66,9 +61,7 @@ class _MainScreenState extends State<MainScreen>
         },
         navBarItems: [
           NavBarData(icon: Icons.home),
-          NavBarData(icon: Icons.favorite),
           NavBarData(icon: Icons.shopping_basket),
-          NavBarData(icon: Icons.person),
         ],
       ),
     );
