@@ -93,7 +93,7 @@ class ProductContainer extends StatelessWidget {
         Text(
           product.name,
           style: TextStyle(
-              fontWeight: FontWeight.w500, fontSize: size.height * 0.016),
+              fontWeight: FontWeight.w500, fontSize: size.height * 0.019),
         ),
         Text(
           "\$${product.price}",
