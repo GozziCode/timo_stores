@@ -1,8 +1,7 @@
----
-
-<img src="Screenshot1.png" width="500" height="700">
-
 # HNG Mobile Dev: Stage One Task  - Timo
+
+---
+![alt text](screenshot1.png)
 
 ## Table of contents
 
@@ -37,10 +36,14 @@ Timo Store is a robust and feature-rich mobile application built using Flutter F
 
 ### Screenshot
 
-<img src="Screenshot1.png" width="300" height="600">
-<img src="Screenshot2.png" width="300" height="600">
-<img src="Screenshot3.png" width="300" height="600">
-<img src="Screenshot4.png" width="300" height="600">
+![alt text](screenshot1.png)
+![alt text](screenshot2.png)
+![alt text](screenshot3.png)
+![alt text](screenshot4.png)
+![alt text](screenshot5.png)
+![alt text](screenshot6.png)
+![alt text](screenshot7.png)
+
 
 ## Features
 
