@@ -36,13 +36,10 @@ Timo Store is a robust and feature-rich mobile application built using Flutter F
 
 ### Screenshot
 
-![alt text](screenshot1.png)
 ![alt text](screenshot2.png)
 ![alt text](screenshot3.png)
-![alt text](screenshot4.png)
 ![alt text](screenshot5.png)
 ![alt text](screenshot6.png)
-![alt text](screenshot7.png)
 
 ## Features
 
