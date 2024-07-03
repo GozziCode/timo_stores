@@ -13,9 +13,9 @@ AppBar homeAppBar(BuildContext context) {
         ),
       ),
     ),
-     leadingWidth: double.infinity,
+    leadingWidth: double.infinity,
     elevation: 0,
-    backgroundColor: const Color(0xFFF5F5F5),
+    backgroundColor: Colors.grey[200],
     actions: [
       Padding(
         padding: const EdgeInsets.symmetric(horizontal: 25),
