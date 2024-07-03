@@ -240,5 +240,3 @@ Please ensure your code adheres to the existing code style and includes appropri
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
----
